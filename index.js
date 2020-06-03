@@ -7,7 +7,9 @@ const db = require('./config/mongoose');
 
 const session = require('express-session');
 const passport = require('passport');
-const passportLocal = require('./config/passport-local-strategy');
+const userPassportLocal = require('./config/user-passport-local-strategy');
+const vendorPassportLocal = require('./config/vendor-passport-local-strategy');
+
 const MongoStore = require('connect-mongo')(session);
 
 app.use(express.urlencoded());

@@ -1,28 +1,28 @@
-const User = require('../models/user');
+const User = require('../models/vendor');
 
 module.exports.profile = function(req, res){
-    res.render('user_profile', {
-        title: 'Users Profile'
+    res.render('vendor_profile', {
+        title: 'Vendors Profile'
     });
 }
 
 module.exports.signUp = function(req, res){
     if (req.isAuthenticated()){
-        return res.redirect('/users/profile');
+        return res.redirect('/vendors/profile');
     }
 
-    res.render('user_sign_up', {
-        title: 'User Sign Up Page'
+    res.render('vendor_sign_up', {
+        title: 'Vendor Sign Up Page'
     });
 }
 
 module.exports.signIn = function(req, res){
     if (req.isAuthenticated()){
-        return res.redirect('/users/profile');
+        return res.redirect('/vendors/profile');
     }
 
-    res.render('user_sign_in', {
-        title: 'User Sign In Page'
+    res.render('vendor_sign_in', {
+        title: 'Vendor Sign In Page'
     });
 }
 
@@ -31,14 +31,14 @@ module.exports.create = function(req, res){
         return res.redirect('back');
     }
 
-    User.findOne({email: req.body.email}, function(err, user){
-        if (err){console.log('error in finding user in signing up'); return}
+    Vendor.findOne({email: req.body.email}, function(err, vendor){
+        if (err){console.log('error in finding vendor in signing up'); return}
 
-        if (!user){
+        if (!vendor){
             User.create(req.body, function(err, user){
-                if (err){console.log('error in creating user while signing up'); return}
+                if (err){console.log('error in creating vendor while signing up'); return}
 
-                return res.redirect('/users/sign-in');
+                return res.redirect('/vendors/sign-in');
             })
         }else {
             return res.redirect('back');
