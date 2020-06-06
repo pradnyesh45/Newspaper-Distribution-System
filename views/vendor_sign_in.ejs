@@ -1,6 +1,38 @@
+<header>
+    Page Header
+
+    <ul>
+        <% if (locals.user){ %>
+            <li>
+                <a href="/vendors/profile">
+                    <%= vendor.name %>
+                </a>
+            </li>
+            <li>
+                <a href="/vendors/sign-out">Vendor Sign Out</a>
+            </li>
+        <% }else{ %>
+    
+            <li>
+                <a href="/vendors/sign-in">Vendor Sign In</a>
+            </li>
+    
+            <li>
+                <a href="/vendors/sign-up">Vendor Sign Up</a>
+            </li>
+    
+    
+        <% } %>
+    </ul>
+
+    
+
+
+</header>
+
 <h1>Vendor Sign In</h1>
 
-<form action="/users/create-session" method="POST">
+<form action="/vendors/create-session" method="POST">
     <input type="email" name="email" placeholder="Email"  required>
     <input type="password" name="password" placeholder="Password"  required>
     <input type="submit" value="Sign In">
