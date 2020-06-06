@@ -30,7 +30,7 @@ app.set('views', './views');
 
 // mongo store is used to store the session cookie in the db
 app.use(session({
-    name: 'codeial',
+    name: 'NDS',
     // TODO change the secret before deployment in production mode
     secret: 'blahsomething',
     saveUninitialized: false,
@@ -53,10 +53,11 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
+
 app.use(passport.setAuthenticatedUser);
 
 // use express router
-app.use('/', require('./routes'));
+app.use('/', require('./routes/index'));
 
 
 app.listen(port, function(err){

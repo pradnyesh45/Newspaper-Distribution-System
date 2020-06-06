@@ -1,9 +1,9 @@
-const User = require('../models/user');
+const Vendor = require('../models/vendor');
 
 
 module.exports.profile = function(req, res){
-    return res.render('user_profile', {
-        title: 'User Profile'
+    return res.render('vendor_profile', {
+        title: 'Vendor Profile'
     })
 }
 
@@ -11,12 +11,12 @@ module.exports.profile = function(req, res){
 // render the sign up page
 module.exports.signUp = function(req, res){
     if (req.isAuthenticated()){
-        return res.redirect('/users/profile');
+        return res.redirect('/vendors/profile');
     }
 
 
-    return res.render('user_sign_up', {
-        title: "NDS | User Sign Up"
+    return res.render('vendor_sign_up', {
+        title: "NDS | Vendor Sign Up"
     })
 }
 
@@ -25,10 +25,10 @@ module.exports.signUp = function(req, res){
 module.exports.signIn = function(req, res){
 
     if (req.isAuthenticated()){
-        return res.redirect('/users/profile');
+        return res.redirect('/vendors/profile');
     }
-    return res.render('user_sign_in', {
-        title: "NDS | User Sign In"
+    return res.render('vendor_sign_in', {
+        title: "NDS | Vendor Sign In"
     })
 }
 
@@ -39,13 +39,13 @@ module.exports.create = function(req, res){
     }
 
     User.findOne({email: req.body.email}, function(err, user){
-        if(err){console.log('error in finding user in signing up'); return}
+        if(err){console.log('error in finding vendor in signing up'); return}
 
         if (!user){
-            User.create(req.body, function(err, user){
-                if(err){console.log('error in creating user while signing up'); return}
+            Vendor.create(req.body, function(err, user){
+                if(err){console.log('error in creating vendor while signing up'); return}
 
-                return res.redirect('/users/sign-in');
+                return res.redirect('/vendors/sign-in');
             })
         }else{
             return res.redirect('back');
@@ -55,7 +55,7 @@ module.exports.create = function(req, res){
 }
 
 
-// sign in and create a session for the user
+// sign in and create a session for the vendor
 module.exports.createSession = function(req, res){
     return res.redirect('/');
 }

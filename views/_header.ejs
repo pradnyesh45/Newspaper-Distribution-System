@@ -9,20 +9,45 @@
                 </a>
             </li>
             <li>
-                <a href="/users/sign-out">Sign Out</a>
+                <a href="/users/sign-out">User Sign Out</a>
             </li>
         <% }else{ %>
 
             <li>
-                <a href="/users/sign-in">Sign In</a>
+                <a href="/users/sign-in">User Sign In</a>
             </li>
 
             <li>
-                <a href="/users/sign-up">Sign Up</a>
+                <a href="/users/sign-up">User Sign Up</a>
             </li>
 
 
         <% } %>
     </ul>
+
+    <!-- <ul>
+        <% if (locals.vendor){ %>
+            <li>
+                <a href="/vendors/profile">
+                    <%= vendor.name %>
+                </a>
+            </li>
+            <li>
+                <a href="/vendors/sign-out">Vendor Sign Out</a>
+            </li>
+        <% }else{ %>
+
+            <li>
+                <a href="/vendors/sign-in">Vendor Sign In</a>
+            </li>
+
+            <li>
+                <a href="/vendors/sign-up">Vendor Sign Up</a>
+            </li>
+
+
+        <% } %>
+    </ul> -->
+
 
 </header>
