@@ -1,42 +1,65 @@
-<header>
-    Page Header
-
-    <ul>
-        <% if (locals.user){ %>
-            <li>
-                <a href="/users/profile">
-                    <%= user.name %>
-                </a>
-            </li>
-            <li>
-                <a href="/users/sign-out">User Sign Out</a>
-            </li>
-        <% }else{ %>
-
-            <li>
-                <a href="/users/sign-in">User Sign In</a>
-            </li>
-
-            <li>
-                <a href="/users/sign-up">User Sign Up</a>
-            </li>
-
-
-        <% } %>
-    </ul>
-
-    
-
-
-</header>
-
 <h1>User Sign Up</h1>
 
 <form action="/users/create" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <input type="password" name="password" placeholder="Password" required>
-    <input type="password" name="confirm_password" placeholder="Confirm Password" required>
-    <input type="submit" value="Sign Up">
-
+    <div class="form-group">
+        <label>Name</label>
+        <input name="name" type="text" placeholder="Name" required class="form-control" aria-describedby="emailHelp">
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input name="email" type="text" placeholder="Email ID" required class="form-control" aria-describedby="emailHelp">
+        <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+        <label>Password</label>
+        <input name="password" type="password" placeholder="Password" required class="form-control">
+    </div>
+    <div class="form-group">
+        <label>Confirm Password</label>
+        <input name="confirm_password" type="password" placeholder="Confirm Password" required class="form-control">
+    </div>
+    <div class="form-group">
+        <label>Phone Number</label>
+        <input name="phone" type="tel" placeholder="Phone Number" required class="form-control" aria-describedby="emailHelp">
+    </div>
+    <div class="form-group">
+        <label>Area where you live: Choose anyone from </label>
+        <ol>
+            <li>Nagpur</li>
+            <li>Indore</li>
+            <li>Bangalore</li>
+            <li>Hyderabad</li>
+        </ol>
+        <input name="area" type="text" placeholder="Area" required class="form-control" aria-describedby="emailHelp">
+    </div>
+    <div class="form-group">
+        <label>Bank Name</label>
+        <input name="bankName" type="text" placeholder="Bank Name" required class="form-control" aria-describedby="emailHelp">
+    </div>
+    <div class="form-group">
+        <label>Account Name</label>
+        <input name="accountName" type="text" placeholder="Account Name" required class="form-control" aria-describedby="emailHelp">
+    </div>
+    <div class="form-group">
+        <label>Bank Account Number</label>
+        <input name="bankAccountNumber" type="number" placeholder="Bank Account Number" required class="form-control" aria-describedby="emailHelp">
+    </div>
+    <div class="form-group">
+        <label>IFSC Code</label>
+        <input name="IFSCCode" type="text" placeholder="IFSC Code" required class="form-control" aria-describedby="emailHelp">
+    </div>
+    <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" required>
+        <label class="form-check-label" for="exampleCheck1">Ensure that every information given by you is correct to your knowledge.</label>
+      </div>
+      <button value="Sign Up" type="submit" class="btn btn-primary">User Sign Up</button>
 </form>
+
+<style>
+    form{
+        margin: 10px;
+    }
+    h1{
+        margin: 10px;
+    }
+</style>

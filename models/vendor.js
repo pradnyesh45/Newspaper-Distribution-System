@@ -14,6 +14,30 @@ const vendorSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    phone: {
+        type: Number,
+        required: true
+    },
+    area: {
+        type: String,
+        required: true
+    },
+    bankName: {
+        type: String,
+        required: true
+    },
+    accountName: {
+        type: String,
+        required: true
+    },
+    bankAccountNumber: {
+        type: Number,
+        required: true
+    },
+    IFSCCode: {
+        type: String,
+        required: true
+    }
 }, {
     timestamps: true
 });

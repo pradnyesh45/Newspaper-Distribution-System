@@ -14,6 +14,33 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    phone: {
+        type: Number,
+        required: true
+    },
+    area: {
+        type: String,
+        required: true
+    },
+    newspaperSubscribed: {
+        type: String,
+    },
+    bankName: {
+        type: String,
+        required: true
+    },
+    accountName: {
+        type: String,
+        required: true
+    },
+    bankAccountNumber: {
+        type: Number,
+        required: true
+    },
+    IFSCCode: {
+        type: String,
+        required: true
+    }
 }, {
     timestamps: true
 });

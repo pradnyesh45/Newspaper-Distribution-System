@@ -1,40 +1,25 @@
-<header>
-    Page Header
-
-    <ul>
-        <% if (locals.user){ %>
-            <li>
-                <a href="/vendors/profile">
-                    <%= vendor.name %>
-                </a>
-            </li>
-            <li>
-                <a href="/vendors/sign-out">Vendor Sign Out</a>
-            </li>
-        <% }else{ %>
-    
-            <li>
-                <a href="/vendors/sign-in">Vendor Sign In</a>
-            </li>
-    
-            <li>
-                <a href="/vendors/sign-up">Vendor Sign Up</a>
-            </li>
-    
-    
-        <% } %>
-    </ul>
-
-    
-
-
-</header>
-
 <h1>Vendor Sign In</h1>
 
 <form action="/vendors/create-session" method="POST">
-    <input type="email" name="email" placeholder="Email"  required>
-    <input type="password" name="password" placeholder="Password"  required>
-    <input type="submit" value="Sign In">
+    <div class="form-group">
+        <label>Email</label>
+        <input name="email" type="text" placeholder="Email ID" class="form-control" aria-describedby="emailHelp">
+        <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+        <label>Password</label>
+        <input name="password" type="password" placeholder="Password" class="form-control">
+    </div>
+    <button value="Sign In" type="submit" class="btn btn-primary">Vendor Sign In</button>
 
 </form>
+
+<style>
+    form{
+        margin: 10px;
+    }
+    h1{
+        margin: 10px;
+    }
+</style>
+

@@ -1,55 +1,14 @@
-<header>
-  <ul>
-    <% if (locals.user){ %>
-        <li>
-            <a href="/users/profile">
-                <%= user.name %>
-            </a>
-        </li>
-        <li>
-            <a href="/users/sign-out">User Sign Out</a>
-        </li>
-    <% }else{ %>
-
-        <li>
-            <a href="/users/sign-in">User Sign In</a>
-        </li>
-
-        <li>
-            <a href="/users/sign-up">User Sign Up</a>
-        </li>
-
-
-    <% } %>
-</ul>
-
-<ul>
-  <% if (locals.user){ %>
-      <li>
-          <a href="/vendors/profile">
-              <%= vendor.name %>
-          </a>
-      </li>
-      <li>
-          <a href="/vendors/sign-out">Vendor Sign Out</a>
-      </li>
-  <% }else{ %>
-
-      <li>
-          <a href="/vendors/sign-in">Vendor Sign In</a>
-      </li>
-
-      <li>
-          <a href="/vendors/sign-up">Vendor Sign Up</a>
-      </li>
-
-
-  <% } %>
-</ul>
-
-
-</header>
-
 <h1>
-  NDS / <%= title %>
+  Newspaper Distribution System / <%= title %>
 </h1>
+
+<div class="container banner">
+
+</div>
+
+<style>
+    h1{
+        margin: 10px;
+    }
+    
+</style>

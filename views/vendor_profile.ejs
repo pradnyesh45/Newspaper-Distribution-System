@@ -1,40 +1,14 @@
 <link rel="stylesheet" href="/css/vendor_profile.css">
 
-<header>
-    Page Header
-
-    <ul>
-        <% if (locals.vendor){ %>
-            <li>
-                <a href="/vendors/profile">
-                    <%= vendor.name %>
-                </a>
-            </li>
-            <li>
-                <a href="/vendors/sign-out">Vendor Sign Out</a>
-            </li>
-        <% }else{ %>
-    
-            <li>
-                <a href="/vendors/sign-in">Vendor Sign In</a>
-            </li>
-    
-            <li>
-                <a href="/vendors/sign-up">Vendor Sign Up</a>
-            </li>
-    
-    
-        <% } %>
-    </ul>
-
-    
-
-
-</header>
-
 <h1>
     NDS / Vendor Profile Page
 </h1>
 
 <p><%= vendor.name %></p>
 <p><%= vendor.email %></p>
+
+<style>
+    p{
+        margin: 20px;
+    }
+</style>
