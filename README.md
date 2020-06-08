@@ -3,6 +3,9 @@ A Web Application based on Newspaper Distribution System
 
 This project makes possible for users to book newspaper service online and also make payment through online mode.
 
+### Features
+- Uses MVC(Models-Views-Controllers) architecture
+
 Steps for running this project on your local system:
 
 ## Step 1
