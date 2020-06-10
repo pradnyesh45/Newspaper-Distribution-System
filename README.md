@@ -20,9 +20,5 @@ Steps for running this project on your local system:
 - Run command $ npm start, this will start the server on port 8000
   
 ## Step 3
-- Click on user sign up for registering as a user
-- Click on vendor sign up for registering as a vendor
-- Click on user sign in for signing as a user
-- Click on user sign out to go to the home page
-- Click on vendor sign in for signing as a vendor
-- Click on vendor sign out to go to the home page
+- Click on user sign-up for registering as a user, click on user sign-in for signing as a user, click on user sign-out to sign out
+- Click on vendor sign up for registering as a vendor, click on user sign-up for signing as a vendor, click on vendor sign-out to sign out
